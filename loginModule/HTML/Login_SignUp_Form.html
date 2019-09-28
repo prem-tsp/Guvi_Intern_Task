@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <link rel = "stylesheet" href = "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+        <link rel = "stylesheet" href="./Login_SignUp_Form.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="./EMailValidation.js"></script>
+        <script src="./disableFeature.js" ></script>
+    </head>
+    <body>
+        <div class="container">
+                    <header>
+                        <div class="jumbotron center">
+                            <h1>Login/SignUp Page</h1>
+                            <p>Register With Valid Email</p>
+                        </div>
+                    </header>
+        
+            <div class="row">
+                <div class="col-lg-12">
+                  <form class="login-form" action="./Includes/index.php" method="POST">
+                            <div class="form-group">
+                                    <label for="RegisterEmail">Email address(For Registration)</label>
+                                    <input class="form-control" id="RegisterEmail" name="RegisterEmail" aria-describedby="emailHelp" placeholder="Enter email">
+                                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                                    <p id = "checkemail"></p>
+                            </div>
+                            <button type="button" class="btn btn-primary" id = "RegisterButton" onclick="checkEmail()">Click To Validate</button>
+                            <button type="submit" class="btn btn-primary float-right" id ="register-but" name = "register-but">Click To Register</button>
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                    <div class="col-lg-12">
+                      <form class="login-form" action="./Includes/login.php" method="POST">
+                                <div class="form-group">
+                                        <label for="LoginEmail">Email address(For Login)</label>
+                                        <input class="form-control" id="LoginEmail" name="LoginEmail" aria-describedby="emailHelp" placeholder="Enter email">
+                                </div>
+                                <button type="submit" class="btn btn-primary float-right" name="loginSubmit">Click To Login</button>
+                        </form>
+                    </div>
+                </div>
+        </div>
+       
+    </body>
+</html>
